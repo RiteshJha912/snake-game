@@ -1,0 +1,131 @@
+/* src/SnakeGame.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+}
+
+.snake-game {
+    text-align: center;
+}
+
+.grid {
+    display: inline-block;
+    border: 2px solid #fff;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    /* Blue background for the game box */
+    transition: filter 0.3s;
+    /* Smooth transition for blur effect */
+}
+
+/* Remove filter: blur from here; we'll control it dynamically */
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.snake {
+    background-color: #4caf50;
+    /* Green for the snake */
+}
+
+.food {
+    background-color: #f44336;
+    /* Red for the food */
+}
+
+.start-button,
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    /* Make button background transparent */
+    border: 2px solid #fff;
+    /* White border for visibility */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover,
+.restart-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slight hover effect */
+}
+
+.game-over {
+    position: absolute;
+    /* Position the game over message */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 10;
+    /* Ensure it is on top */
+}
+
+/* New styles for centering the start button */
+.start-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Game active state styles */
+.game-active .grid {
+    filter: none;
+    /* Remove blur when game is active */
+}
+
+.game-inactive .grid {
+    filter: blur(4px);
+    /* Apply blur when game is inactive */
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls button {
+    margin: 10px 20px 10px 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    /* Adjust button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.controls div {
+    display: flex;
+    justify-content: center;
+}
