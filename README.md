@@ -1,4 +1,4 @@
-### Just a fun miniproject using React for my portfolio.
+### Just a fun miniproject to start with building games
 
 
 https://snake-game-lemon-nu.vercel.app/
