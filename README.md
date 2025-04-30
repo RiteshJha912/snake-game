@@ -2,3 +2,6 @@
 
 
 https://snake-game-lemon-nu.vercel.app/
+
+
+time milte hi iska readme likhunga 
