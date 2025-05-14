@@ -4,10 +4,20 @@ import './SnakeGame.css'
 import GameBoard from './components/GameBoard'
 import Controls from './components/Controls'
 import useSnakeGame from './components/useSnakeGame'
+import { useState } from 'react'
+
 
 const SnakeGame = () => {
   const gameAreaRef = useRef(null)
   const controlGesture = useRef({ startX: 0, startY: 0 })
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const {
     snake,
@@ -26,6 +36,17 @@ const SnakeGame = () => {
     handleKeyPress,
     setIsPaused,
   } = useSnakeGame()
+
+  // Show message for PC users to use arrow keys
+  const [showPCMessage, setShowPCMessage] = useState(false)
+
+  useEffect(() => {
+    if (!isMobile && gameStarted) {
+      setShowPCMessage(true)
+      const timer = setTimeout(() => setShowPCMessage(false), 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [gameStarted, isMobile])
 
   // Touch gesture controls for mobile
   const handleTouchStart = (event) => {
@@ -95,6 +116,12 @@ const SnakeGame = () => {
         </div>
       </div>
 
+      {showPCMessage && (
+        <div className='pc-controls-hint'>
+          Use arrow keys to move. Press space bar to pause.
+        </div>
+      )}
+
       <GameBoard
         gameAreaRef={gameAreaRef}
         gameStarted={gameStarted}
@@ -112,14 +139,16 @@ const SnakeGame = () => {
         resumeGame={resumeGame}
       />
 
-      <Controls
-        gameStarted={gameStarted}
-        gameOver={gameOver}
-        isPaused={isPaused}
-        lastDirection={lastDirection}
-        handleControlButtonClick={handleControlButtonClick}
-        setIsPaused={setIsPaused}
-      />
+      {isMobile && (
+        <Controls
+          gameStarted={gameStarted}
+          gameOver={gameOver}
+          isPaused={isPaused}
+          lastDirection={lastDirection}
+          handleControlButtonClick={handleControlButtonClick}
+          setIsPaused={setIsPaused}
+        />
+      )}
     </div>
   )
 }
