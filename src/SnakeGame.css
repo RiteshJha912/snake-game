@@ -1,5 +1,5 @@
-/* src/SnakeGame.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* src/SnakeGame.css with updated retro fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Silkscreen:wght@400;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 
 :root {
     --primary-color: #4ade80;
@@ -11,13 +11,17 @@
     --accent-color: #f43f5e;
     --grid-border: #334155;
     --cell-border: #1e293b;
+    --title-font: 'Press Start 2P', cursive;
+    --menu-font: 'Silkscreen', cursive;
+    --stat-font: 'VT323', monospace;
+    --button-font: 'Pixelify Sans', sans-serif;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--menu-font);
     background: linear-gradient(135deg, var(--background-color) 0%, #0f0f1a 100%);
     color: var(--text-color);
     min-height: 100vh;
@@ -48,14 +52,30 @@ body {
     margin-bottom: 10px;
 }
 
+.header-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.game-logo {
+    height: 35px;
+    width: auto;
+    margin: 0 10px;
+    animation: pulse 2s infinite alternate;
+}
+
 .game-header h1 {
-    margin: 0 0 10px;
+    margin: 0;
     font-size: 2rem;
     font-weight: 700;
+    font-family: var(--title-font);
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
 .stats-container {
@@ -77,6 +97,7 @@ body {
 }
 
 .stat-label {
+    font-family: var(--menu-font);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -84,8 +105,10 @@ body {
 }
 
 .stat-value {
+    font-family: var(--stat-font);
     font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .game-area {
@@ -219,20 +242,23 @@ body {
     padding: 20px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
+    max-width: 70%;
     animation: fadeIn 0.3s ease-out;
 }
 
 .menu-card h2 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-family: var(--title-font);
     color: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 .menu-card p {
     margin-bottom: 15px;
     opacity: 0.9;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    font-family: var(--menu-font);
 }
 
 .primary-button,
@@ -240,6 +266,7 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: var(--button-font);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -299,6 +326,7 @@ body {
     align-items: center;
     background-color: var(--surface-color);
     color: var(--text-color);
+    font-family: var(--button-font);
     cursor: pointer;
     transition: all 0.2s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -343,6 +371,7 @@ body {
 .game-instructions {
     margin-top: 10px;
     font-size: 0.8rem;
+    font-family: var(--menu-font);
     text-align: center;
     opacity: 0.7;
     max-width: 90%;
@@ -352,15 +381,15 @@ body {
     margin: 2px 0;
 }
 
-
 .pc-controls-hint {
     margin-top: 10px;
     padding: 10px;
     background-color: #333;
     color: #fff;
+    font-family: var(--menu-font);
     border-radius: 8px;
     text-align: center;
-    animation: fadeInOut 2s ease-in-out forwards;
+    animation: fadeInOut 5s ease-in-out forwards;
 }
 
 @keyframes fadeInOut {
@@ -385,17 +414,16 @@ body {
     }
 }
 
-
-/* Animations */
+/* Animations  */
 @keyframes pulse {
     0% {
         transform: scale(0.8);
-        box-shadow: 0 0 10px rgba(244, 63, 94, 0.7);
+        /* box-shadow: 0 0 10px rgba(244, 63, 94, 0.7); */
     }
 
     100% {
         transform: scale(0.9);
-        box-shadow: 0 0 20px rgba(244, 63, 94, 0.9);
+        /* box-shadow: 0 0 20px rgba(244, 63, 94, 0.9); */
     }
 }
 
@@ -436,7 +464,11 @@ body {
     }
 
     .game-header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .game-logo {
+        height: 40px;
     }
 
     .control-button {
@@ -454,6 +486,10 @@ body {
     .game-header h1 {
         font-size: 1.5rem;
         margin-bottom: 5px;
+    }
+
+    .game-logo {
+        height: 28px;
     }
 
     .stats-container {
@@ -478,6 +514,11 @@ body {
 
     .stat-value {
         font-size: 1.2rem;
+    }
+
+    .game-logo {
+        height: 24px;
+        margin: 0 5px;
     }
 
     .control-button {

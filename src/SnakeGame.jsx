@@ -6,6 +6,9 @@ import Controls from './components/Controls'
 import useSnakeGame from './components/useSnakeGame'
 import { useState } from 'react'
 
+// Import your logo here - you'll need to adjust the path to where your logo is stored
+// For example, if it's in the public folder:
+// import logo from './logo.png'
 
 const SnakeGame = () => {
   const gameAreaRef = useRef(null)
@@ -103,7 +106,19 @@ const SnakeGame = () => {
   return (
     <div className='snake-game-container'>
       <div className='game-header'>
-        <h1>Snake Game</h1>
+        <div className='header-with-logo'>
+          <img
+            src='../public/logonew.png'
+            className='game-logo'
+            alt='Slinket.io Logo'
+          />
+          <h1>Slinket.io</h1>
+          <img
+            src='../public/logonew.png'
+            className='game-logo'
+            alt='Slinket.io Logo'
+          />
+        </div>
         <div className='stats-container'>
           <div className='stat-box'>
             <span className='stat-label'>Score</span>

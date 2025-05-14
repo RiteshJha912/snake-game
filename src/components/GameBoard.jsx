@@ -56,13 +56,13 @@ const GameBoard = ({
       {!gameStarted && (
         <div className='overlay start-screen'>
           <div className='menu-card'>
-            <h2>Welcome to Snake</h2>
-            <p>Use arrow keys, swipe, or on-screen controls to play</p>
+            <h2>Welcome to Slinket.io</h2>
+            <p>Use arrow keys, swipe or on-screen controls to play</p>
             <button
               onClick={startGame}
               className='primary-button pulse-animation'
             >
-              Start Game
+              Start
             </button>
           </div>
         </div>
