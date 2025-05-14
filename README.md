@@ -44,12 +44,12 @@ snake-xenzia/
 ├── eslint.config.js      # ESLint setup
 ├── index.html            # Base HTML template
 ├── src/                  # Source code
-│   ├── main.jsx          # React app entry point
-│   ├── index.css         # Global styles
-│   ├── App.jsx           # Main application layout
-│   ├── App.css           # App-specific styles
-│   ├── SnakeGame.jsx     # Snake game logic and UI
-│   └── SnakeGame.css     # Game-specific styles
+├── components/
+│   ├── GameBoard.jsx         # Grid rendering and cell visuals
+│   ├── Controls.jsx          # Button controls and touch input handlers
+│   └── useSnakeGame.js       # Custom hook to manage game logic/state
+├── SnakeGame.jsx             # High-level component combining everything
+├── SnakeGame.css
 └── dist/                 # Production build output (auto-generated)
 ```
 
