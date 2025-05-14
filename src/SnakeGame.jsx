@@ -107,16 +107,16 @@ const SnakeGame = () => {
     <div className='snake-game-container'>
       <div className='game-header'>
         <div className='header-with-logo'>
-          <img
-            src='../public/logonew.png'
-            className='game-logo'
-            alt='Slinket.io Logo'
+          <img 
+          src='/logonew.png' 
+          className='game-logo' 
+          alt='Slinket.io Logo' 
           />
           <h1>Slinket.io</h1>
-          <img
-            src='../public/logonew.png'
-            className='game-logo'
-            alt='Slinket.io Logo'
+          <img 
+          src='/logonew.png' 
+          className='game-logo' 
+          alt='Slinket.io Logo' 
           />
         </div>
         <div className='stats-container'>
