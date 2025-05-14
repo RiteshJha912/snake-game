@@ -60,7 +60,7 @@ body {
 }
 
 .game-logo {
-    height: 35px;
+    height: 40px;
     width: auto;
     margin: 0 10px;
     animation: pulse 2s infinite alternate;
@@ -517,8 +517,11 @@ body {
     }
 
     .game-logo {
-        height: 24px;
+        height: 20px;
         margin: 0 5px;
+    }
+    .game-header h1{
+        font-size: 20px;
     }
 
     .control-button {
