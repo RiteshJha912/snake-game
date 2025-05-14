@@ -1,12 +1,12 @@
-# Snake Xenzia Game
+# slinket.io
 
 A fun and interactive **Snake** game built using **React** and **Vite**. Designed with responsive behavior in mind, it offers smooth gameplay on both desktop and mobile devices. The game includes modern controls, dynamic difficulty scaling, and polished UI for an enjoyable experience.
 
 ---
 
-##  Live Demo
+## 🎮 Live Demo 🎮
 
-Try it out here: [Snake Game Live](https://snake-game-lemon-nu.vercel.app/)
+Try it out here: [slinket.io](https://snake-game-lemon-nu.vercel.app/)
 
 ---
 
@@ -20,7 +20,7 @@ Try it out here: [Snake Game Live](https://snake-game-lemon-nu.vercel.app/)
 
 ---
 
-## 🎮 How to Play
+##  How to Play
 
 1. **Start the Game**: Click the "Start Game" button.
 2. **Controls**:
@@ -33,7 +33,7 @@ Try it out here: [Snake Game Live](https://snake-game-lemon-nu.vercel.app/)
 ---
 
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 snake-xenzia/
@@ -74,8 +74,8 @@ snake-xenzia/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/snake-xenzia.git
-cd snake-xenzia
+git clone https://github.com/RiteshJha912/snake-game.git
+cd snake-game
 
 # Install dependencies
 npm install
