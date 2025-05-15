@@ -6,7 +6,7 @@ A fun and interactive **Snake** game built using **React** and **Vite**. Designe
 
 ## 🎮 Live Demo 🎮
 
-Try it out here: [slinket.io](https://slinket-io.vercel.app/)
+Try it out here: <a href="https://slinket-io.vercel.app/" target="_blank">slinket.io</a>  
 
 
 ---
